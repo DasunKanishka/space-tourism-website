@@ -1,0 +1,29 @@
+body {
+	background-color: hsl(var(--color-dark));
+	color: hsl(var(--color-white));
+}
+
+.colors .wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2rem;
+}
+
+.colors .wrapper .column div {
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+.colors .wrapper .column div:first-of-type {
+	display: flex;
+	align-items: flex-end;
+	height: 7rem;
+	padding: 1.5rem;
+	border: 1px solid hsl(var(--color-white));
+}
+
+.colors .wrapper .column div span {
+	display: inline-block;
+	min-width: 2.25rem;
+	margin-right: 4rem;
+}
