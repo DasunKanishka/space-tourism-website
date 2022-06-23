@@ -1,6 +1,58 @@
+:root {
+	--color-dark: 230 35% 7%;
+	--color-light: 231 77% 90%;
+	--color-white: 0 0% 100%;
+
+	--m-1: 0.5rem;
+	--m-2: 1.5rem;
+	--m-3: 3rem;
+	--m-4: 4rem;
+	--m-5: 6.25rem;
+}
+
+.container {
+	max-width: 100rem;
+	padding: 0 2rem;
+	margin: 0 auto;
+}
+
+.sr-only {
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
 body {
 	background-color: hsl(var(--color-dark));
 	color: hsl(var(--color-white));
+}
+
+.bg-dark {
+	background-color: hsl(var(--color-dark));
+}
+
+.bg-light {
+	background-color: hsl(var(--color-light));
+}
+
+.bg-white {
+	background-color: hsl(var(--color-white));
+}
+
+header h1 {
+	margin-top: var(--m-4);
+	margin-bottom: var(--m-5);
+}
+
+.colors,
+.typography {
+	margin-bottom: var(--m-5);
 }
 
 .colors .wrapper {
@@ -10,8 +62,11 @@ body {
 }
 
 .colors .wrapper .column div {
-	margin-bottom: 1.5rem;
 	text-transform: uppercase;
+}
+
+.colors .wrapper .column div:not(:last-of-type) {
+	margin-bottom: var(--m-3);
 }
 
 .colors .wrapper .column div:first-of-type {
@@ -25,5 +80,20 @@ body {
 .colors .wrapper .column div span {
 	display: inline-block;
 	min-width: 2.25rem;
-	margin-right: 4rem;
+	margin-right: var(--m-4);
+}
+
+.typography .wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 2rem;
+}
+
+.typography .wrapper .column article:not(:last-of-type) {
+	margin-bottom: var(--m-2);
+}
+
+.typography .wrapper .column article span {
+	display: block;
+	margin-bottom: var(--m-1);
 }
