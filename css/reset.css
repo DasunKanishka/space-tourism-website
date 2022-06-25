@@ -9,6 +9,8 @@ html:focus-within {
 }
 
 body {
+	display: grid;
+	grid-template-rows: min-content 1fr;
 	min-height: 100vh;
 	line-height: 1;
 	text-rendering: optimizeSpeed;
