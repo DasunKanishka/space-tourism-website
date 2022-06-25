@@ -7,16 +7,35 @@
 
 	--fs-200: 0.875rem;
 	--fs-300: 1rem;
-	--fs-400: 1.125rem;
+	--fs-400: 0.9375rem;
 	--fs-500: 1.75rem;
-	--fs-600: 2rem;
-	--fs-700: 3.5rem;
-	--fs-800: 6.25rem;
-	--fs-900: 9.375rem;
+	--fs-600: 1rem;
+	--fs-700: 1.5rem;
+	--fs-800: 3.5rem;
+	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 
 	--ls-1: 4.75px;
 	--ls-2: 2.7px;
 	--ls-3: 2.35px;
+}
+
+@media screen and (min-width: 48em) {
+	:root {
+		--fs-400: 1rem;
+		--fs-600: 1.5rem;
+		--fs-700: 2.5rem;
+		--fs-800: 5rem;
+		--fs-900: 9.375rem;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	:root {
+		--fs-400: 1.125rem;
+		--fs-600: 2rem;
+		--fs-700: 3.5rem;
+		--fs-800: 6.25rem;
+	}
 }
 
 body {
