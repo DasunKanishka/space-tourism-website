@@ -1,0 +1,144 @@
+.button {
+	display: grid;
+	place-items: center;
+	max-width: fit-content;
+	padding: 0 2.15em;
+	background-color: hsl(var(--color-white));
+	border-radius: 50%;
+	aspect-ratio: 1;
+	position: relative;
+	color: hsl(var(--color-dark));
+	font-family: var(--ff-serif);
+	font-size: var(--fs-600);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button::after {
+	content: '';
+	background-color: hsl(var(--color-white) / 0.1);
+	border-radius: inherit;
+	opacity: 0;
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	transition: opacity 500ms linear, transform 500ms ease-in-out;
+}
+
+.button:hover::after,
+.button:focus::after {
+	opacity: 1;
+	transform: scale(1.5);
+}
+
+.main-navigation {
+	width: 100%;
+	background-color: hsl(var(--color-white) / 0.04);
+}
+
+.main-navigation ul {
+	--underline-gap: 2.1875em;
+
+	display: flex;
+	justify-content: center;
+	gap: var(--m-5);
+	color: hsl(var(--color-white));
+	font-family: var(--ff-sans-cond);
+	font-size: var(--fs-300);
+	letter-spacing: var(--ls-2);
+	text-transform: uppercase;
+}
+
+.main-navigation a span {
+	margin-right: var(--m-2);
+	font-weight: 700;
+}
+
+.tabs ul,
+[role='tablist'] ul {
+	display: flex;
+	justify-content: center;
+	gap: var(--tab-gap, 2.1875em);
+}
+
+[role='tab'] button {
+	color: hsl(var(--color-light));
+	font-family: var(--ff-sans-cond);
+	font-size: var(--fs-300);
+	letter-spacing: var(--ls-2);
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.underline-indicators > * {
+	display: block;
+	padding: var(--underline-gap, 0.75em) 0;
+	background: none;
+	border: 0;
+	border-bottom: 0.1875em solid hsl(var(--color-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+	border-color: hsl(var(--color-white) / 0.5);
+}
+
+.underline-indicators.active > *,
+.underline-indicators[aria-selected='true'] > * {
+	color: hsl(var(--color-white));
+	border-color: hsl(var(--color-white));
+}
+
+.dot-indicators {
+	display: flex;
+	justify-content: center;
+	gap: var(--m-2);
+}
+
+.dot-indicators button {
+	padding: 0.5rem;
+	aspect-ratio: 1;
+	background-color: hsl(var(--color-white) / 0.17);
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.dot-indicators button:hover,
+.dot-indicators button:focus {
+	background-color: hsl(var(--color-white) / 0.5);
+}
+
+.dot-indicators button[aria-selected='true'] {
+	background-color: hsl(var(--color-white));
+}
+
+.number-indicators {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--m-2);
+}
+
+.number-indicators button {
+	padding: 0 1.025em;
+	aspect-ratio: 1;
+	background: none;
+	border: 1px solid hsl(var(--color-white) / 0.25);
+	border-radius: 50%;
+	color: hsl(var(--color-white));
+	font-family: var(--ff-serif);
+	font-size: var(--fs-600);
+	cursor: pointer;
+}
+
+.number-indicators button:hover,
+.number-indicators button:focus,
+.number-indicators button[aria-selected='true'] {
+	border-color: hsl(var(--color-white));
+}
+
+.number-indicators button[aria-selected='true'] {
+	background-color: hsl(var(--color-white));
+	color: hsl(var(--color-dark));
+}

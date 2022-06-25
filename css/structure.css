@@ -28,9 +28,32 @@
 	white-space: nowrap;
 }
 
-body {
-	background-color: hsl(var(--color-dark));
-	color: hsl(var(--color-white));
+.grid {
+	display: grid;
+}
+
+.flex {
+	display: flex;
+}
+
+.gap-1 {
+	gap: var(--m-1);
+}
+
+.gap-2 {
+	gap: var(--m-2);
+}
+
+.gap-3 {
+	gap: var(--m-3);
+}
+
+.gap-4 {
+	gap: var(--m-4);
+}
+
+.gap-5 {
+	gap: var(--m-5);
 }
 
 .bg-dark {
@@ -45,9 +68,21 @@ body {
 	background-color: hsl(var(--color-white));
 }
 
-header h1 {
+body {
+	background-color: hsl(var(--color-dark));
+	color: hsl(var(--color-white));
+}
+
+header.container {
 	margin-top: var(--m-4);
+}
+
+header h1 {
 	margin-bottom: var(--m-5);
+}
+
+main.container {
+	margin-bottom: var(--m-4);
 }
 
 .colors,
@@ -96,4 +131,20 @@ header h1 {
 .typography .wrapper .column article span {
 	display: block;
 	margin-bottom: var(--m-1);
+}
+
+.interactive-elements .wrapper {
+	display: grid;
+	grid-template: auto auto / repeat(2, minmax(0, 1fr));
+	gap: var(--m-5);
+}
+
+.interactive-elements .wrapper .column {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+
+.interactive-elements .wrapper .column:first-of-type {
+	grid-column: 1 / 3;
 }
